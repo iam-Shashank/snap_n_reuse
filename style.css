@@ -24,7 +24,9 @@
    7px 7px 15px rgba(55, 84, 170, .15), 
    -7px -7px 20px rgba(255, 255, 255, 1), 
    inset 0px 0px 4px rgba(255, 255, 255, .2);
-/*background: #f1f3f6;*/
+background: #f1f3f6;
+
+
 
 
    transition: box-shadow 399ms ease-in-out;
@@ -45,26 +47,22 @@
   border-style: solid;*/
   /*border-width: thin;*/
   text-decoration: none;
-  
   padding: 5px;
 /*background: var(--white-grad);*/
-/*border-radius: 25px;
-background: #f2f2f2;
-box-shadow: inset 7px 7px 14px #c6c6c6, 
-            inset -7px -7px 14px #ffffff;*/
+
 
 border-radius: 25px;
-background: #f1f3f6;
-box-shadow:  7px 7px 14px #cdcfd1, 
-             -7px -7px 14px #ffffff;
+background: linear-gradient(145deg, #ffffff, #d9dbdd);
+box-shadow:  27px 27px 54px #cdcfd1, 
+             -27px -27px 54px #ffffff;
 }
 
 .product-select {
   /*padding: 1em;*/
-  margin:2em 1em;
+  margin:3em 1em;
   /*align-items: center;*/
 /*  border:2px inset #000000;
-  border-style: solid;*/
+  border-style:  solid;*/
   /*border-width: thin;*/
   text-decoration: none;
   
@@ -73,6 +71,11 @@ border-radius: 25px;
 background: #f1f3f6;
 box-shadow:  7px 7px 14px #cdcfd1, 
              -7px -7px 14px #ffffff;
+
+/*border-radius: 25px;
+background: linear-gradient(145deg, #ffffff, #d9dbdd);
+box-shadow:  27px 27px 54px #cdcfd1, 
+             -27px -27px 54px #ffffff;*/
 }
 
 .instructions {
@@ -119,7 +122,7 @@ box-shadow:  7px 7px 14px #cdcfd1,
 html,
 body {
   margin: 0 auto;
-  max-width: 60em;
+  max-width: 50em;
   height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;

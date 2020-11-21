@@ -2,7 +2,7 @@ $(document).ready(function() {
   tf = window.tf;
 
   async function loadMobilenet() {
-    const modelWeigths = await tf.loadModel('https://raw.githubusercontent.com/iam-Shashank/reusr/main/model/model.json');
+    const modelWeigths = await tf.loadModel('https://raw.githubusercontent.com/iam-Shashank/snap_n_reuse/main/model/model.json');
     // const modelWeigths = await tf.loadModel('model/model.json');
 
     // console.log(modelWeigths);
@@ -101,7 +101,7 @@ async function inferImage(image){
   $("#results_title").text("Results");
   $("#first_place").text(buldLabel(response,  0) );
 
-  let url = 'https://raw.githubusercontent.com/iam-Shashank/reusr/main/links.json';
+  let url = 'https://raw.githubusercontent.com/iam-Shashank/snap_n_reuse/main/links.json';
   console.log(url);
   fetch(url)
   .then(res => res.json())
@@ -113,6 +113,19 @@ async function inferImage(image){
     // $("#link3").text(out[response[0][0].toLowerCase()][2].title);
 
 
+    // var a = document.createElement('a');    
+    // // Create the text node for anchor element. 
+    // var link = document.createTextNode(out[response[0][0].toLowerCase()][0].title); 
+    // // Append the text node to anchor element. 
+    // a.appendChild(link); 
+    // // Set the title. 
+    // a.title = out[response[0][0].toLowerCase()][0].title;  
+    // // Set the href property. 
+    // a.href = out[response[0][0].toLowerCase()][0].url;  
+    // // Append the anchor element to the body. 
+    // document.getElementById("link1").appendChild(a); 
+
+
     var a = document.createElement('a');    
     // Create the text node for anchor element. 
     var link = document.createTextNode(out[response[0][0].toLowerCase()][0].title); 
@@ -122,8 +135,12 @@ async function inferImage(image){
     a.title = out[response[0][0].toLowerCase()][0].title;  
     // Set the href property. 
     a.href = out[response[0][0].toLowerCase()][0].url;  
-    // Append the anchor element to the body. 
-    document.getElementById("link1").appendChild(a); 
+    // Append the anchor element to the body.
+    var list=document.getElementById("link1");
+    if (list.children.length){
+      list.removeChild(list.childNodes[0]);
+    }
+    list.appendChild(a); 
 
 
     var a = document.createElement('a');    
@@ -135,8 +152,12 @@ async function inferImage(image){
     a.title = out[response[0][0].toLowerCase()][1].title;  
     // Set the href property. 
     a.href = out[response[0][0].toLowerCase()][1].url;  
-    // Append the anchor element to the body. 
-    document.getElementById("link2").appendChild(a); 
+    // Append the anchor element to the body.
+    var list=document.getElementById("link2");
+    if (list.children.length){
+      list.removeChild(list.childNodes[0]);
+    }
+    list.appendChild(a);  
 
 
     var a = document.createElement('a');    
@@ -148,8 +169,12 @@ async function inferImage(image){
     a.title = out[response[0][0].toLowerCase()][2].title;  
     // Set the href property. 
     a.href = out[response[0][0].toLowerCase()][2].url;  
-    // Append the anchor element to the body. 
-    document.getElementById("link3").appendChild(a); 
+    // Append the anchor element to the body.
+    var list=document.getElementById("link3");
+    if (list.children.length){
+      list.removeChild(list.childNodes[0]);
+    }
+    list.appendChild(a);
 
 
 
