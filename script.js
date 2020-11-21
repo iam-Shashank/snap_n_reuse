@@ -108,9 +108,57 @@ async function inferImage(image){
   .then((out) => {
     console.log(response[0][0]);
     console.log(out[response[0][0]][0].title);
-    $("#link1").text(out[response[0][0].toLowerCase()][0].title);
-    $("#link2").text(out[response[0][0].toLowerCase()][1].title);
-    $("#link3").text(out[response[0][0].toLowerCase()][2].title);
+    // $("#link1").text(out[response[0][0].toLowerCase()][0].title);
+    // $("#link2").text(out[response[0][0].toLowerCase()][1].title);
+    // $("#link3").text(out[response[0][0].toLowerCase()][2].title);
+
+
+    var a = document.createElement('a');    
+    // Create the text node for anchor element. 
+    var link = document.createTextNode(out[response[0][0].toLowerCase()][0].title); 
+    // Append the text node to anchor element. 
+    a.appendChild(link); 
+    // Set the title. 
+    a.title = out[response[0][0].toLowerCase()][0].title;  
+    // Set the href property. 
+    a.href = out[response[0][0].toLowerCase()][0].url;  
+    // Append the anchor element to the body. 
+    document.getElementById("link1").appendChild(a); 
+
+
+    var a = document.createElement('a');    
+    // Create the text node for anchor element. 
+    var link = document.createTextNode(out[response[0][0].toLowerCase()][1].title); 
+    // Append the text node to anchor element. 
+    a.appendChild(link); 
+    // Set the title. 
+    a.title = out[response[0][0].toLowerCase()][1].title;  
+    // Set the href property. 
+    a.href = out[response[0][0].toLowerCase()][1].url;  
+    // Append the anchor element to the body. 
+    document.getElementById("link2").appendChild(a); 
+
+
+    var a = document.createElement('a');    
+    // Create the text node for anchor element. 
+    var link = document.createTextNode(out[response[0][0].toLowerCase()][2].title); 
+    // Append the text node to anchor element. 
+    a.appendChild(link); 
+    // Set the title. 
+    a.title = out[response[0][0].toLowerCase()][2].title;  
+    // Set the href property. 
+    a.href = out[response[0][0].toLowerCase()][2].url;  
+    // Append the anchor element to the body. 
+    document.getElementById("link3").appendChild(a); 
+
+
+
+
+
+
+
+
+
   })
   .catch(err => { throw err });
 
