@@ -109,6 +109,8 @@ async function inferImage(image){
     console.log(response[0][0]);
     console.log(out[response[0][0]][0].title);
     $("#link1").text(out[response[0][0].toLowerCase()][0].title);
+    $("#link2").text(out[response[0][0].toLowerCase()][1].title);
+    $("#link3").text(out[response[0][0].toLowerCase()][2].title);
   })
   .catch(err => { throw err });
 
