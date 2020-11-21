@@ -31,106 +31,107 @@
       <article>
         <h1 class="center">Snap N Reuse</h1>
         <h2 class="subtitle center">make reusing a daily habit</h2>
-        <br />
-        <p>more intro. Snap a picture of a waste item and get recommendations to reuse it! </p>
+        <p>
+         <h2 class="subtitle center"> 
+        Just snap or upload picture of  waste items & get curated recommendations to reuse it! 
+      </h2>
+        </p>
         <br />
       </article>
 
       <div class="product-gallery">
 
-
-
         <div class="product-select">  
-          <div class="instructions">          
-          <h2>Select a demo image or choose file/webcam</h2>
-          <input type="file" id="userImageInput" onchange="startUserImage()" accept="image/x-png,image/jpg,image/jpeg" />
-          </div>
+            <div class="instructions">          
+              <h2>Select a demo image or choose file/webcam</h2>
+              <input type="file" id="userImageInput" onchange="startUserImage()" accept="image/x-png,image/jpg,image/jpeg" />
+            </div>
 
-          <div class="product-photo-main">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/cardboard149.jpg" crossOrigin="anonymous">
+            <div class="product-photo-main">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/cardboard149.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass117.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass9.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/paper551.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic1.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic197.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <img id="imageFromUser">
+                    <div id="textInfoSendImage">
+                      Use the menu on the right to use a photo from your computer!
+                    </div>
                   </div>
                 </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass117.jpg" crossOrigin="anonymous">
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+
+            <div class="product-photos-side">
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/cardboard149.jpg" crossOrigin="anonymous">
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass9.jpg" crossOrigin="anonymous">
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass117.jpg" crossOrigin="anonymous">
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/paper551.jpg" crossOrigin="anonymous">
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass9.jpg" crossOrigin="anonymous">
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic1.jpg" crossOrigin="anonymous">
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/paper551.jpg" crossOrigin="anonymous">
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic197.jpg" crossOrigin="anonymous">
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic1.jpg" crossOrigin="anonymous">
+                    </div>
                   </div>
-                </div>
-                <div class="swiper-slide">
-                  <img id="imageFromUser">
-                  <div id="textInfoSendImage">
-                    Use the menu on the right to use a photo from your computer!
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic197.jpg" crossOrigin="anonymous">
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper-zoom-container">
+                      <img src="https://adrianodennanni.github.io/furniture_classifier/upload_icon.png" style="padding:15px;">
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="product-photos-side">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/cardboard149.jpg" crossOrigin="anonymous">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass117.jpg" crossOrigin="anonymous">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/glass9.jpg" crossOrigin="anonymous">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/paper551.jpg" crossOrigin="anonymous">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic1.jpg" crossOrigin="anonymous">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://raw.githubusercontent.com/iam-Shashank/reusr/main/demo_img/plastic197.jpg" crossOrigin="anonymous">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="swiper-zoom-container">
-                    <img src="https://adrianodennanni.github.io/furniture_classifier/upload_icon.png" style="padding:15px;">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>     
+            </div>     
         </div>   
 
         <div class="info-display">
@@ -142,9 +143,16 @@
 
           <div class="recommend">
             <h1 id="results_title">Here are some recommendations to reuse </h1>
+            
+            <div class="article">
             <h2 id="link1"></h2>
+            </div> 
+            <div class="article">
             <h2 id="link2"></h2>
+            </div>             
+            <div class="article">
             <h2 id="link3"></h2>
+            </div> 
             
           </div>
         </div>
