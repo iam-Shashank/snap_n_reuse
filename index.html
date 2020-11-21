@@ -8,13 +8,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css" />
 
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" />
+
+
+
+
+  
 
 
 </head>
 
 <body>  
   <div class="main">
+
+<!--               <div class="row text-center">
+              <div class="col-md-6 buttonclass text-left">
+              <button class="Neurobutton" onclick="startWebcam()"><i class="fa fa-camera">CAMICON</i></button>
+              </div>
+              </div>
+              <video id="myVidPlayer" muted autoplay></video>
+              <button onclick="snapshot()">Snapshot</button>
+              <div class="mycanvas">
+              <h6>Captured snapshot</h6>
+              <canvas></canvas>
+
+              </div> -->
 
 
       <article>
@@ -31,10 +50,15 @@
       <div class="product-gallery">
 
         <div class="product-select">  
+
+
             <div class="instructions">          
               <h2>Select a demo image or choose file/webcam</h2>
+
               <input type="file" id="userImageInput" onchange="startUserImage()" accept="image/x-png,image/jpg,image/jpeg" />
             </div>
+
+
 
             <div class="product-photo-main">
               <div class="swiper-container">
@@ -131,15 +155,15 @@
           </div>
 
           <div class="recommend">
-            <h1 id="results_title">Here are some recommendations to reuse </h1>
+            <h1 id="results_title">Here are some recommendations for you </h1>
             
-            <div class="article">
+            <div class="link-shown">
             <h2 id="link1"></h2>
             </div> 
-            <div class="article">
+            <div class="link-shown">
             <h2 id="link2"></h2>
             </div>             
-            <div class="article">
+            <div class="link-shown">
             <h2 id="link3"></h2>
             </div> 
             

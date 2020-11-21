@@ -14,48 +14,19 @@
 /*__________my css mods_________________________________*/
 
 
-.article{
-   border: 1px solid #fff;
-   margin:2em;
-   background: #f1f3f6;
-   border-radius: 20px;
-   box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), 
-   inset 0 0 20px rgba(255, 255, 255, 0), 
-   7px 7px 15px rgba(55, 84, 170, .15), 
-   -7px -7px 20px rgba(255, 255, 255, 1), 
-   inset 0px 0px 4px rgba(255, 255, 255, .2);
-background: #f1f3f6;
+/*
+ article{
+  padding: 1em;
+  border-radius: 25px;
+  background: radial-gradient(77.95% 77.95% at 74.66% 58.07%, rgba(255, 254, 220, 0.8) 0%, rgba(255, 255, 255, 0.152) 62.28%, rgba(255, 255, 255, 0) 100%), 
+  radial-gradient(89.67% 70.39% at 93.75% 92.16%, #29C2D7 0%, rgba(144, 160, 215, 0.49) 52.46%, rgba(255, 156, 156, 0) 100%), 
+  radial-gradient(68.86% 68.86% at 94.55% 1.7%, #FADC90 0%, rgba(250, 220, 144, 0) 100%), 
+  linear-gradient(130.87deg, rgba(245, 115, 122, 0.78) 3.47%, rgba(245, 115, 122, 0) 77.25%); 
+  background-blend-mode: overlay, normal, normal, normal, normal, normal; 
+  filter: blur(42px);
 
-
-
-
-   transition: box-shadow 399ms ease-in-out;
 }
- .article:hover {
-   box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, .2);
-}
- 
-
-
-.info-display {
-  /*padding: 1em;*/
-  margin:2em 1em;
-  /*display: flex;*/
-  /*justify-content: center;*/
-  align-items: center;
-/*  border:2px inset #000000;
-  border-style: solid;*/
-  /*border-width: thin;*/
-  text-decoration: none;
-  padding: 5px;
-/*background: var(--white-grad);*/
-
-
-border-radius: 25px;
-background: linear-gradient(145deg, #ffffff, #d9dbdd);
-box-shadow:  27px 27px 54px #cdcfd1, 
-             -27px -27px 54px #ffffff;
-}
+*/
 
 .product-select {
   /*padding: 1em;*/
@@ -67,15 +38,16 @@ box-shadow:  27px 27px 54px #cdcfd1,
   text-decoration: none;
   
 /*background: var(--white-grad);*/
-border-radius: 25px;
+/*border-radius: 25px;
 background: #f1f3f6;
 box-shadow:  7px 7px 14px #cdcfd1, 
-             -7px -7px 14px #ffffff;
+             -7px -7px 14px #ffffff;*/
 
-/*border-radius: 25px;
+border-radius: 25px;
 background: linear-gradient(145deg, #ffffff, #d9dbdd);
 box-shadow:  27px 27px 54px #cdcfd1, 
-             -27px -27px 54px #ffffff;*/
+             -27px -27px 54px #ffffff;
+
 }
 
 .instructions {
@@ -106,6 +78,47 @@ box-shadow:  27px 27px 54px #cdcfd1,
 }
 
 
+.info-display {
+  /*padding: 1em;*/
+  margin:2em 1em;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  align-items: center;
+/*  border:2px inset #000000;
+  border-style: solid;*/
+  /*border-width: thin;*/
+  text-decoration: none;
+  padding: 5px;
+/*background: var(--white-grad);*/
+
+
+border-radius: 25px;
+background: linear-gradient(145deg, #ffffff, #d9dbdd);
+box-shadow:  27px 27px 54px #cdcfd1, 
+             -27px -27px 54px #ffffff;
+
+}
+
+.link-shown{
+   border: 1px solid #fff;
+   margin:2em;
+   background: #f1f3f6;
+   border-radius: 20px;
+   box-shadow: inset 0 0 15px rgba(55, 84, 170, 0), 
+   inset 0 0 20px rgba(255, 255, 255, 0), 
+   7px 7px 15px rgba(55, 84, 170, .15), 
+   -7px -7px 20px rgba(255, 255, 255, 1), 
+   inset 0px 0px 4px rgba(255, 255, 255, .2);
+background: #f1f3f6;
+
+   transition: box-shadow 399ms ease-in-out;
+}
+ .link-shown:hover {
+   box-shadow: inset 7px 7px 15px rgba(55, 84, 170, .15), inset -7px -7px 20px rgba(255, 255, 255, 1), 0px 0px 4px rgba(255, 255, 255, .2);
+}
+
+
+
 /*____________old css_______________________*/
 
 
@@ -134,14 +147,13 @@ body {
   padding: 0.5em 0.5em;
   /*color: var(--green-grad);*/
 
-  /*background:linear-gradient(135deg, #c3ec52 0%,#0ba29d 100%);*/
-/*background: linear-gradient(0deg, #FFF6B7, #F6416C );*/
-  background-image: #f1f3f6;
-/*  background-color: #f2f2f2;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23f2f2f2' stroke-width='0.74' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cuse fill='%23ededed' href='%23s' y='2'/%3E%3Cuse fill='%23ededed' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23e8e8e8' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23e8e8e8' href='%23s'/%3E%3Cuse fill='%23e3e3e3' href='%23s' x='2'/%3E%3Cuse fill='%23e3e3e3' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23dfdfdf'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23dfdfdf'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23dadada'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23d5d5d5'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(24.75) translate(-959.6 -719.7)'%3E%3Cg fill='%23F60'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;*/
+  background-color: #f1f3f6;
+  /*background-image: url("2.jpg");*/
+  /*background-repeat: repeat;*/
+
 }
+
+
 
 /*html {
   background-color: #FFF;
@@ -157,7 +169,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   font-weight: normal;
   font-style: normal;
-}*/
+}
 
 /*.container {
   margin: auto;

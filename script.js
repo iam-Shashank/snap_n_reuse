@@ -192,7 +192,7 @@ async function inferImage(image){
 //add error handling for other than those 5 tags.
 
 function buldLabel(response, index){
-  return response[index][0]+": "+response[index][1].toFixed(4);
+  return response[index][0]+" detected with accuracy: "+response[index][1].toFixed(4);
 }
 
 
