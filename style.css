@@ -57,6 +57,7 @@ box-shadow:  27px 27px 54px #cdcfd1,
 .Neurobutton {
   width: 100px;
   height: 100px;
+  margin:1em;
   /*margin-top: 100px;*/
   /*padding: 2em;*/
   font-family: 'Open Sans', Arial, sans-serif;
@@ -79,6 +80,11 @@ box-shadow:  27px 27px 54px #cdcfd1,
 
 .Neurobutton:focus {
   outline: none;
+}
+
+#myVidPlayer{
+  /*width:200px;*/
+  /*margin-top: 50px;*/
 }
 
 #upload-icon{

@@ -245,13 +245,24 @@ window.navigator.mediaDevices.getUserMedia({video:true})
 
 }
 
-function snapshot(){
+async function snapshot(){
   context.fillRect(0, 0, w, h);
   context.drawImage(video, 0, 0, w, h);
   console.log(w,h,video);
   inferImage(video);
   canvas.style.display = "block";
-  console.log("canvas",canvas.toDataURL("image/png", 1));
+  console.log("context canvas",context.canvas.toDataURL("image/png"));
+
+  $("#imageFromUser")[0].src = context.canvas.toDataURL("image/png");
+    await new Promise(resolve => setTimeout(resolve, 500));
+    inferImage($("#imageFromUser")[0]);
+  // if(swiperProduct.activeIndex == 12){
+  //   await new Promise(resolve => setTimeout(resolve, 500));
+  //   inferImage($("#imageFromUser")[0]);
+  // } else{
+  //   swiperProduct.slideTo(12);
+  // };
+
   tracks=video.srcObject.getTracks();
   tracks.forEach(function(track) {
     track.stop();
