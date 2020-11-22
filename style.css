@@ -81,7 +81,10 @@ box-shadow:  27px 27px 54px #cdcfd1,
   outline: none;
 }
 
+#upload-icon{
 
+  width: 5px;
+}
 .product-photos-side {
   position: relative;
   padding: 1em;
