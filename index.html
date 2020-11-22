@@ -11,6 +11,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.0/css/swiper.min.css" />
 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
 
 
@@ -55,7 +56,8 @@
             <div class="instructions">          
               <h2>Select a demo image or choose file/webcam</h2>
 
-              <input type="file" id="userImageInput" onchange="startUserImage()" accept="image/x-png,image/jpg,image/jpeg" />
+              <input type="file" id="userImageInput" onchange="startUserImage()" accept="image/x-png,image/jpg,image/jpeg" style="display:none; "/>
+              <button id="uploadbutton" class="Neurobutton" onclick="uploadImage()"><i class="fa fa-upload"></i></button>
             </div>
 
 
@@ -155,16 +157,21 @@
           </div>
 
           <div class="recommend">
-            <h1 id="results_title">Here are some recommendations for you </h1>
+            <h1 id="results_title">Here are some recommendations to reuse </h1>
             
             <div class="link-shown">
-            <h2 id="link1"></h2>
+                <img id="item-icon-1" src="" alt="">
+                <h2 id="link1"></h2>
             </div> 
+
             <div class="link-shown">
-            <h2 id="link2"></h2>
-            </div>             
+              <img id="item-icon-2" src="" alt="">
+              <h2 id="link2"></h2>
+            </div>    
+
             <div class="link-shown">
-            <h2 id="link3"></h2>
+              <img id="item-icon-3" src="" alt="">
+              <h2 id="link3"></h2>
             </div> 
             
           </div>

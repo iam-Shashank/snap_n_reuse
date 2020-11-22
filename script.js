@@ -55,12 +55,16 @@ $(document).ready(function() {
   });
 });
 
+function uploadImage(){
+  document.getElementById("userImageInput").click();
+}
+
 async function startUserImage(imageFilePath) {
   $("#textInfoSendImage").remove();
   var imgDataURL = window.URL.createObjectURL(document.getElementById('userImageInput').files[0]);
   $("#imageFromUser")[0].src = imgDataURL;
   if(swiperProduct.activeIndex == 12){
-    await new Promise(resolve => setTimeout(resolve, 10));
+    await new Promise(resolve => setTimeout(resolve, 500));
     inferImage($("#imageFromUser")[0]);
   } else{
     swiperProduct.slideTo(12);
@@ -106,24 +110,12 @@ async function inferImage(image){
   fetch(url)
   .then(res => res.json())
   .then((out) => {
+    console.log(response);
     console.log(response[0][0]);
     console.log(out[response[0][0]][0].title);
     // $("#link1").text(out[response[0][0].toLowerCase()][0].title);
     // $("#link2").text(out[response[0][0].toLowerCase()][1].title);
     // $("#link3").text(out[response[0][0].toLowerCase()][2].title);
-
-
-    // var a = document.createElement('a');    
-    // // Create the text node for anchor element. 
-    // var link = document.createTextNode(out[response[0][0].toLowerCase()][0].title); 
-    // // Append the text node to anchor element. 
-    // a.appendChild(link); 
-    // // Set the title. 
-    // a.title = out[response[0][0].toLowerCase()][0].title;  
-    // // Set the href property. 
-    // a.href = out[response[0][0].toLowerCase()][0].url;  
-    // // Append the anchor element to the body. 
-    // document.getElementById("link1").appendChild(a); 
 
 
     var a = document.createElement('a');    
@@ -176,11 +168,41 @@ async function inferImage(image){
     }
     list.appendChild(a);
 
+    if(response[0][0]=="cardboard"){
+      console.log($("#item-icon-1")[0]);
+      $("#item-icon-1")[0].src="icons/0-box.png";
+      $("#item-icon-2")[0].src="icons/0-box.png";
+      $("#item-icon-3")[0].src="icons/0-box.png";
+      
 
+    } else if(response[0][0]=="glass bottle"){
+      $("#item-icon-1")[0].src="icons/1-soda-bottle.png";
+      $("#item-icon-2")[0].src="icons/1-soda-bottle.png";
+      $("#item-icon-3")[0].src="icons/1-soda-bottle.png";
 
+    } else if(response[0][0]=="glass jar"){
+      $("#item-icon-1")[0].src="icons/2-honey.png";
+      $("#item-icon-2")[0].src="icons/2-honey.png";
+      $("#item-icon-3")[0].src="icons/2-honey.png";
 
+    } else if(response[0][0]=="paper"){
+      $("#item-icon-1")[0].src="icons/3-document.png";
+      $("#item-icon-2")[0].src="icons/3-document.png";
+      $("#item-icon-3")[0].src="icons/3-document.png";
 
+    } else if(response[0][0]=="plastic bottle"){
+      $("#item-icon-1")[0].src="icons/4-plastic-bottle.png";
+      $("#item-icon-2")[0].src="icons/4-plastic-bottle.png";
+      $("#item-icon-3")[0].src="icons/4-plastic-bottle.png";
 
+    } else if(response[0][0]=="plastic container"){
+      $("#item-icon-1")[0].src="icons/5-container.png";
+      $("#item-icon-2")[0].src="icons/5-container.png";
+      $("#item-icon-3")[0].src="icons/5-container.png";
+
+    } else {
+
+    }
 
 
 
@@ -196,3 +218,44 @@ function buldLabel(response, index){
 }
 
 
+var w,h;
+var canvas = document.querySelector("canvas");
+const context = canvas.getContext("2d");
+const video = document.querySelector('#myVidPlayer');
+canvas.style.display = "none";
+
+function startWebcam(){
+window.navigator.mediaDevices.getUserMedia({video:true})
+.then(stream=>{
+  video.srcObject=stream;
+  video.onloadedmetadata = (e) => {
+    video.play();
+
+    w = video.videoWidth;
+    h = video.videoHeight;
+
+    canvas.width = w;
+    canvas.height = h;
+    
+  }
+})
+.catch( () => {
+  alert('You have to give camera permission to your browser');
+});
+
+}
+
+function snapshot(){
+  context.fillRect(0, 0, w, h);
+  context.drawImage(video, 0, 0, w, h);
+  console.log(w,h,video);
+  inferImage(video);
+  canvas.style.display = "block";
+  console.log("canvas",canvas.toDataURL("image/png", 1));
+  tracks=video.srcObject.getTracks();
+  tracks.forEach(function(track) {
+    track.stop();
+  });
+  video.srcObject=null;
+
+}
